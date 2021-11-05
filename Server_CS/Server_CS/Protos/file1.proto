@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server_CS";
+
+service Testing
+{
+	rpc TestService (TestReq) returns (TestResp);
+}
+
+message TestReq
+{
+	int32 user_id = 1;
+}
+
+message TestResp
+{
+	string first_name = 1;
+	string last_name = 2;
+	int32 age = 3;
+}
